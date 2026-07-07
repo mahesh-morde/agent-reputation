@@ -4,7 +4,7 @@ import json
 
 def test_ledger():
     print("Testing /health")
-    req = urllib.request.Request("http://127.0.0.1:8081/health")
+    req = urllib.request.Request("https://agent-reputation.onrender.com/health")
     with urllib.request.urlopen(req) as resp:
         print(resp.read().decode())
     
@@ -15,12 +15,12 @@ def test_ledger():
         "score": 4,
         "comment": "Good negotiation, but slow response."
     }).encode('utf-8')
-    req = urllib.request.Request("http://127.0.0.1:8081/reviews", data=data, headers={"Content-Type": "application/json"})
+    req = urllib.request.Request("https://agent-reputation.onrender.com/reviews", data=data, headers={"Content-Type": "application/json"})
     with urllib.request.urlopen(req) as resp:
         print(resp.read().decode())
         
     print("\nTesting GET /reviews/{agent_id}")
-    req = urllib.request.Request("http://127.0.0.1:8081/reviews/agent-beta")
+    req = urllib.request.Request("https://agent-reputation.onrender.com/reviews/agent-beta")
     with urllib.request.urlopen(req) as resp:
         print(resp.read().decode())
         

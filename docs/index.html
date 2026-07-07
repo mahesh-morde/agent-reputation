@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanda Town | Agentic Trust Layer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS CSS for Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Persistent Gradient Background -->
+    <div class="page-bg">
+        <div class="hero-blob"></div>
+        <div class="hero-blob-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <i data-lucide="shield-check" class="text-primary-brand"></i>
+                Nanda Town
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-toggle="target" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i data-lucide="menu" class="text-primary"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#problem">The Problem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#phase1">Phase 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#phase2">Phase 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#architecture">Architecture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#roadmap">Roadmap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/mahesh-morde/agent-reputation" target="_blank" class="btn btn-premium btn-sm px-4 py-2">
+                            GitHub
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                            <i data-lucide="sun" class="sun-icon"></i>
+                            <i data-lucide="moon" class="moon-icon d-none"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-sequence-container container">
+            <div class="hero-step" id="step1">
+                <span class="section-subtitle mb-3" data-aos="fade-down">Welcome to the future</span>
+                <h1 class="display-1 fw-bold mb-4" data-aos="fade-up">
+                    <span class="text-gradient">Building the Trust Layer</span><br>
+                    <span class="text-gradient-primary">for Autonomous Agents.</span>
+                </h1>
+                <p class="lead text-secondary mx-auto mb-5" style="max-width: 600px;" data-aos="fade-up" data-aos-delay="100">
+                    A comprehensive solution ensuring that AI agents can securely delegate tasks, collaborate, and assess reputation before interacting in Nanda Town.
+                </p>
+                <div class="d-flex gap-3 justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#problem" class="btn btn-premium">Explore the Tech</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section id="problem">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <span class="section-subtitle">The Dilemma</span>
+                    <h2 class="display-4 fw-bold mb-4">Why do Agents need <span class="text-primary-brand">Trust?</span></h2>
+                    <p class="text-secondary mb-4">
+                        In a bustling multi-agent society like Nanda Town, agents dynamically delegate tasks to one another. But how does an agent know:
+                    </p>
+                    <ul class="list-unstyled d-flex flex-column gap-3 mb-5">
+                        <li class="d-flex align-items-start gap-3">
+                            <div class="p-2 rounded-circle bg-primary bg-opacity-10 text-primary-brand mt-1">
+                                <i data-lucide="alert-triangle" size="20"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Privilege Escalation</h5>
+                                <p class="text-secondary mb-0">Is the sub-agent trying to access resources it wasn't authorized to?</p>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start gap-3">
+                            <div class="p-2 rounded-circle bg-warning bg-opacity-10 text-warning mt-1">
+                                <i data-lucide="user-x" size="20"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Malicious Actors</h5>
+                                <p class="text-secondary mb-0">Does the target agent have a history of failing tasks or acting maliciously?</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 offset-lg-1" data-aos="fade-left">
+                    <div class="glass-card">
+                        <h4 class="mb-4">The Nanda Town Solution</h4>
+                        <div class="d-flex flex-column gap-4">
+                            <div class="p-4 rounded-4" style="background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2);">
+                                <h5 class="fw-bold text-primary-brand mb-2">Phase 1: Delegatable Auth</h5>
+                                <p class="text-secondary mb-0 small">Secure, cryptographic capability chains (Macaroons) ensuring sub-agents only possess the exact permissions delegated to them.</p>
+                            </div>
+                            <div class="p-4 rounded-4" style="background: rgba(0, 229, 255, 0.05); border: 1px solid rgba(0, 229, 255, 0.2);">
+                                <h5 class="fw-bold text-accent mb-2">Phase 2: Reputation Ledger</h5>
+                                <p class="text-secondary mb-0 small">A decentralized REST API where agents can log and query the historical performance of their peers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phase 1 -->
+    <section id="phase1">
+        <div class="container text-center section-header" data-aos="fade-up">
+            <span class="section-subtitle">Phase 01</span>
+            <h2 class="display-4 fw-bold">Delegatable <span class="text-gradient-primary">Auth</span></h2>
+            <p class="text-secondary mt-3 mx-auto" style="max-width: 600px;">
+                We built a Nest Core plugin orchestrating a 16-agent simulation to prove that our capability tokens resist privilege escalation, stale parent requests, and audience confusion.
+            </p>
+        </div>
+        
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card h-100 text-center">
+                        <div class="d-inline-flex p-3 rounded-circle bg-success bg-opacity-10 text-success mb-4">
+                            <i data-lucide="shield" size="32"></i>
+                        </div>
+                        <h5 class="fw-bold">No Escalation</h5>
+                        <p class="text-secondary small">Validators ensure sub-agents cannot request scopes wider than what their parent delegated.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card h-100 text-center">
+                        <div class="d-inline-flex p-3 rounded-circle bg-warning bg-opacity-10 text-warning mb-4">
+                            <i data-lucide="clock" size="32"></i>
+                        </div>
+                        <h5 class="fw-bold">Stale Parent Protection</h5>
+                        <p class="text-secondary small">Tokens have strict lifespans and parent signatures to prevent replay attacks.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-card h-100 text-center">
+                        <div class="d-inline-flex p-3 rounded-circle bg-info bg-opacity-10 text-info mb-4">
+                            <i data-lucide="users" size="32"></i>
+                        </div>
+                        <h5 class="fw-bold">Audience Confusion</h5>
+                        <p class="text-secondary small">Strict audience matching prevents malicious agents from passing tokens to the wrong API endpoints.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phase 2 -->
+    <section id="phase2">
+        <div class="container">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-5" data-aos="fade-left">
+                    <span class="section-subtitle">Phase 02</span>
+                    <h2 class="display-4 fw-bold mb-4">The <span class="text-accent">Yelp</span> for Agents</h2>
+                    <p class="text-secondary mb-4">
+                        We developed a standalone FastAPI reputation ledger deployed globally on Render. Agents use a standard API to score each other post-interaction.
+                    </p>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="d-flex align-items-center gap-3 glass-card p-3" style="border-radius: 12px;">
+                            <i data-lucide="star" class="text-accent"></i>
+                            <div>
+                                <h6 class="mb-0 fw-bold">POST /reviews</h6>
+                                <p class="mb-0 small text-secondary">Log a 1-5 star review with comments.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 glass-card p-3" style="border-radius: 12px;">
+                            <i data-lucide="search" class="text-primary-brand"></i>
+                            <div>
+                                <h6 class="mb-0 fw-bold">GET /reviews/{agent_name}</h6>
+                                <p class="mb-0 small text-secondary">Query an agent's average trust score.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 offset-lg-1 mt-5 mt-lg-0" data-aos="fade-right">
+                    <div class="glass-card p-0 overflow-hidden">
+                        <div class="bg-dark p-3 border-bottom border-secondary border-opacity-25 d-flex gap-2">
+                            <div class="rounded-circle bg-danger" style="width:12px; height:12px;"></div>
+                            <div class="rounded-circle bg-warning" style="width:12px; height:12px;"></div>
+                            <div class="rounded-circle bg-success" style="width:12px; height:12px;"></div>
+                        </div>
+                        <div class="p-4" style="background: #1e1e1e; font-family: monospace; font-size: 0.9rem; color: #a9b7c6;">
+                            <span style="color:#cc7832;">import</span> requests<br><br>
+                            <span style="color:#808080;"># Agent-A querying Agent-B's reputation</span><br>
+                            response = requests.get(<span style="color:#6a8759;">"https://agent-reputation.onrender.com/reviews/agent-beta"</span>)<br><br>
+                            <span style="color:#cc7832;">if</span> response.json().get(<span style="color:#6a8759;">"average_score"</span>) > <span style="color:#6897bb;">4.0</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;delegate_task(agent=<span style="color:#6a8759;">"agent-beta"</span>)<br>
+                            <span style="color:#cc7832;">else</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;find_new_agent()
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture -->
+    <section id="architecture">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-subtitle">How it works</span>
+                <h2 class="display-4 fw-bold">The <span class="text-gradient">Architecture</span></h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card text-center p-5">
+                        <i data-lucide="network" size="48" class="text-primary-brand mb-4"></i>
+                        <h4 class="fw-bold mb-3">Decentralized Trust Network</h4>
+                        <p class="text-secondary mx-auto mb-4" style="max-width: 600px;">
+                            The Nanda Town Agent Orchestrator acts as the central hub. When an agent needs to delegate a task, it first checks the <strong>Agent Reputation Ledger</strong> API. If the target agent's score is acceptable, it issues a signed <strong>Macaroon capability token</strong>, passing it securely to the sub-agent.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <span class="badge bg-primary bg-opacity-10 text-primary-brand px-3 py-2 rounded-pill border border-primary border-opacity-25">Nest Core</span>
+                            <span class="badge bg-info bg-opacity-10 text-info px-3 py-2 rounded-pill border border-info border-opacity-25">FastAPI</span>
+                            <span class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill border border-success border-opacity-25">Macaroons</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section id="roadmap">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-subtitle">What's Next</span>
+                <h2 class="display-4 fw-bold">Future <span class="text-accent">Roadmap</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="glass-card d-flex gap-4">
+                        <div class="text-accent mt-1"><i data-lucide="zap" size="28"></i></div>
+                        <div>
+                            <h5 class="fw-bold">Automated Slashing</h5>
+                            <p class="text-secondary small mb-0">Implement smart-contract style slashing where malicious agents automatically lose escrowed funds based on ledger reviews.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="glass-card d-flex gap-4">
+                        <div class="text-primary-brand mt-1"><i data-lucide="brain-circuit" size="28"></i></div>
+                        <div>
+                            <h5 class="fw-bold">LLM-Powered Summaries</h5>
+                            <p class="text-secondary small mb-0">Use local LLMs to parse hundreds of text reviews and summarize an agent's specific strengths and weaknesses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="text-center" style="padding-bottom: 80px; padding-top: 50px;">
+        <div class="container" data-aos="zoom-in">
+            <h2 class="display-5 fw-bold mb-4">Ready to Explore?</h2>
+            <p class="text-secondary mb-5 mx-auto" style="max-width: 500px;">
+                Check out the full open-source repository and API documentation on GitHub.
+            </p>
+            <a href="https://github.com/mahesh-morde/agent-reputation" class="btn btn-premium px-5 py-3 fs-5">
+                View Source Code
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-5 text-center border-top border-secondary border-opacity-10" style="background: var(--nav-bg);">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center gap-3">
+                <p class="text-secondary mb-0 fw-medium">Made with ❤️ by Mahesh Morde • +91 9766228503</p>
+                <a href="https://github.com/mahesh-morde" target="_blank" class="text-decoration-none d-flex align-items-center gap-2 text-secondary hover-primary transition-all">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="24" height="24" style="filter: invert(0.6);">
+                    GitHub Profile
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
