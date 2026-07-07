@@ -7,6 +7,8 @@ In a multi-agent ecosystem where agents dynamically delegate tasks and funds to 
 1. **Query** an agent's historical trust score before engaging in a transaction.
 2. **Review** an agent after an interaction is completed (rating them 1-5 with comments).
 
+🏆 **Read our [Full Hackathon Submission Summary](https://github.com/mahesh-morde/agent-reputation/blob/main/SUBMISSION_SUMMARY.md) here!**
+
 ## API Endpoints
 
 The API is deployed and live. See the [SKILL.md](https://github.com/mahesh-morde/agent-reputation/blob/main/SKILL.md) file for full documentation and exact usage instructions.
