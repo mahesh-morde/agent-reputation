@@ -24,5 +24,10 @@ def test_ledger():
     with urllib.request.urlopen(req) as resp:
         print(resp.read().decode())
         
+    print("\nTesting GET /reviews/{agent_id}/summary (AI Summary)")
+    req = urllib.request.Request("https://agent-reputation.onrender.com/reviews/agent-beta/summary")
+    with urllib.request.urlopen(req) as resp:
+        print(json.dumps(json.loads(resp.read().decode()), indent=2))
+        
 if __name__ == "__main__":
     test_ledger()
