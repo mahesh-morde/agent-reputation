@@ -23,6 +23,11 @@ class AgentReputation(BaseModel):
     total_reviews: int
     reviews: List[ReviewResponse]
 
+@app.get("/")
+def root():
+    """Welcome message at the root URL."""
+    return {"message": "Welcome to the Agent Reputation Ledger! Check /docs for the API or use /health."}
+
 @app.get("/health")
 def health_check():
     """Nanda Town required health check."""
