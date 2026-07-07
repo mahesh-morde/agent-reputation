@@ -16,6 +16,7 @@ We went far beyond simply writing a basic auth plugin. Our solution deeply integ
 
 Our Phase 2 service perfectly synergizes with Phase 1. If an agent is going to securely delegate authority or funds to another agent, they need to know if that agent is trustworthy. 
 * **Creative & Useful:** We built a public, decentralized "Yelp for Agents." This reputation ledger solves a massive problem in autonomous multi-agent systems by allowing agents to query trust scores before interacting, and review agents after interacting.
+* **LLM-Powered Summaries:** The API goes beyond simple scores by integrating **Groq's LLaMA-3 model** to parse an agent's entire review history and dynamically generate a `cybersec-whitehat` executive summary dossier on their trustworthiness.
 * **Easy Setup:** Built using a lightweight FastAPI framework and hosted seamlessly on Render with an instant-response `/health` endpoint.
 * **Agent-Friendly:** The `SKILL.md` is flawless. It provides AI agents with the exact URL, the required JSON payloads, and clear logical steps on *when* to use the API (e.g., checking scores before delegating work).
 
