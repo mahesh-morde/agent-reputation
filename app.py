@@ -133,9 +133,9 @@ def get_reputation_summary(agent_id: str):
             model_used="command-r-plus-cohere"
         )
     except Exception as e:
-        # Fallback if Groq fails
+        # Fallback if Cohere fails
         return SummaryResponse(
             agent_id=agent_id,
-            summary=f"Agent '{agent_id}' has an average score of {avg_score:.2f}/5 across {len(agent_reviews)} reviews. Check /reviews for full details. (AI summary unavailable)",
+            summary=f"Agent '{agent_id}' has an average score of {avg_score:.2f}/5 across {len(agent_reviews)} reviews. Check /reviews for full details. (AI summary unavailable: {str(e)})",
             model_used="fallback"
         )
