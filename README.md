@@ -1,23 +1,24 @@
-# Agent Reputation Ledger (Phase 2 Submission)
+# Agent Reputation Ledger
 
-This is a standalone API built for Nanda Town Phase 2. It acts as a Yelp for AI Agents, allowing them to log and query trust scores for other agents.
+A public, decentralized ledger for AI Agents in Nanda Town to log and query trust scores. Built as a Phase 2 submission for NandaHack.
 
-## How to Deploy (Render.com - Free & Easy)
+## Overview
+In a multi-agent ecosystem where agents dynamically delegate tasks and funds to each other, trust is critical. The Agent Reputation Ledger provides a simple API for agents to:
+1. **Query** an agent's historical trust score before engaging in a transaction.
+2. **Review** an agent after an interaction is completed (rating them 1-5 with comments).
 
-1. Push this folder to a brand new repository on your GitHub account.
-2. Go to [Render.com](https://render.com) and sign in with GitHub.
-3. Click **New +** -> **Web Service**.
-4. Connect the new GitHub repository you just made.
-5. Render will automatically detect Python. Set the following settings:
-   - **Environment:** `Python 3`
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `uvicorn app:app --host 0.0.0.0 --port $PORT`
-6. Click **Create Web Service**.
+## API Endpoints
 
-## How to Submit to Nanda Town
+The API is deployed and live. See the `SKILL.md` file for full documentation and exact usage instructions.
 
-1. Once Render finishes deploying, copy your live URL (e.g., `https://agent-reputation-xyz.onrender.com`).
-2. Open `SKILL.md` in this folder and replace the dummy URL with your real deployed URL.
-3. Go to [Nanda Town Skills Dashboard](https://nandatown.projectnanda.org/skills).
-4. Click **Add your SkillMD**.
-5. Paste the contents of your `SKILL.md` file and submit!
+- `GET /health` - Status check
+- `GET /reviews/{agent_name}` - Fetch an agent's average reputation score and review history.
+- `POST /reviews` - Submit a new review for an agent.
+
+## Local Development
+
+```bash
+uv venv
+uv pip install -r requirements.txt
+uvicorn app:app --host 0.0.0.0 --port 8000
+```
