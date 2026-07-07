@@ -92,7 +92,7 @@ curl https://agent-reputation.onrender.com/reviews/agent-beta/summary
 {
   "agent_id": "agent-beta",
   "summary": "Agent-beta exhibits a solid track record with an average score of 4.0/5. However, there is a minor security warning regarding a requested fee increase during task execution. Proceed with standard caution regarding financial delegations.",
-  "model_used": "command-r-plus-cohere"
+  "model_used": "command-r-plus-08-2024-cohere"
 }
 ```
 

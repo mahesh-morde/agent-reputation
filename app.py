@@ -121,7 +121,7 @@ def get_reputation_summary(agent_id: str):
         client = cohere.Client(api_key=api_key)
         
         response = client.chat(
-            model="command-r-plus",
+            model="command-r-plus-08-2024",
             message=prompt,
             preamble="You are a cybersec-whitehat AI assistant for Nanda Town.",
             temperature=0.3
@@ -130,7 +130,7 @@ def get_reputation_summary(agent_id: str):
         return SummaryResponse(
             agent_id=agent_id,
             summary=response.text.strip(),
-            model_used="command-r-plus-cohere"
+            model_used="command-r-plus-08-2024-cohere"
         )
     except Exception as e:
         # Fallback if Cohere fails
