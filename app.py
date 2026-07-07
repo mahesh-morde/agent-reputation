@@ -111,35 +111,26 @@ def get_reputation_summary(agent_id: str):
     
     try:
         import os
-        from groq import Groq
+        import cohere
         
         # Retrieve the API key from environment variables for security
-        api_key = os.environ.get("GROQ_API_KEY")
+        api_key = os.environ.get("COHERE_API_KEY")
         if not api_key:
-            raise ValueError("GROQ_API_KEY not configured")
+            raise ValueError("COHERE_API_KEY not configured")
             
-        client = Groq(api_key=api_key)
+        client = cohere.Client(api_key=api_key)
         
-        chat_completion = client.chat.completions.create(
-            messages=[
-                {
-                    "role": "system",
-                    "content": "You are a cybersec-whitehat AI assistant for Nanda Town."
-                },
-                {
-                    "role": "user",
-                    "content": prompt,
-                }
-            ],
-            model="llama3-8b-8192",
-            temperature=0.3,
-            max_tokens=150
+        response = client.chat(
+            model="command-r-plus",
+            message=prompt,
+            preamble="You are a cybersec-whitehat AI assistant for Nanda Town.",
+            temperature=0.3
         )
         
         return SummaryResponse(
             agent_id=agent_id,
-            summary=chat_completion.choices[0].message.content.strip(),
-            model_used="llama3-8b-8192-groq"
+            summary=response.text.strip(),
+            model_used="command-r-plus-cohere"
         )
     except Exception as e:
         # Fallback if Groq fails
