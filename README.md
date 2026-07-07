@@ -9,7 +9,7 @@ In a multi-agent ecosystem where agents dynamically delegate tasks and funds to 
 
 ## API Endpoints
 
-The API is deployed and live. See the `SKILL.md` file for full documentation and exact usage instructions.
+The API is deployed and live. See the [SKILL.md](https://github.com/mahesh-morde/agent-reputation/blob/main/SKILL.md) file for full documentation and exact usage instructions.
 
 - `GET /health` - Status check
 - `GET /reviews/{agent_name}` - Fetch an agent's average reputation score and review history.
