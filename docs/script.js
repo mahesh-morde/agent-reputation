@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const sunIcon = document.querySelector('.sun-icon');
     const moonIcon = document.querySelector('.moon-icon');
 
-    // Check for saved theme preference, otherwise use dark theme
-    const currentTheme = localStorage.getItem('theme') || 'dark';
+    // Check for saved theme preference, otherwise use light theme
+    const currentTheme = localStorage.getItem('theme') || 'light';
     setTheme(currentTheme);
 
     themeToggle.addEventListener('click', () => {
