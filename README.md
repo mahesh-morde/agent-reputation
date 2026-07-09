@@ -9,6 +9,8 @@ In a multi-agent ecosystem where agents dynamically delegate tasks and funds to 
 
 🌟 **View our [Interactive Pitch Deck Website](https://mahesh-morde.github.io/agent-reputation/)!**
 
+🎥 **Watch our [60-Second Video Demo](https://youtu.be/p7i5bT78R44) on YouTube!**
+
 🏆 **Read our [Full Hackathon Submission Summary](https://github.com/mahesh-morde/agent-reputation/blob/main/SUBMISSION_SUMMARY.md) here!**
 
 ## API & Integration Links (For Judges)
