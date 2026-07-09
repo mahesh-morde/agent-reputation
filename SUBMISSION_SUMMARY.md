@@ -2,6 +2,13 @@
 
 This document outlines how our hackathon submission comprehensively addresses the judging criteria for both Phase 1 and Phase 2 of the NandaHack event. 
 
+### 🌟 Core Submission Links (Opens in new tab)
+- 🎥 **[Watch the 60-Second Video Demo](https://youtu.be/p7i5bT78R44)**
+- 🎨 **[View the Interactive Presentation Website](https://mahesh-morde.github.io/agent-reputation/)**
+- 🧪 **[Test the API Live in Swagger UI](https://agent-reputation.onrender.com/docs)**
+- 📜 **[Read the SKILL.md Agent Specification](https://github.com/mahesh-morde/agent-reputation/blob/main/SKILL.md)**
+
+
 ## Phase 1: Problem 04 (Delegatable Auth)
 *The judges look for correct, well-tested code that fits Nanda Town's design.* 
 
