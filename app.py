@@ -48,6 +48,14 @@ def submit_review(review: Review):
     reviews_db.append(new_review)
     return new_review
 
+@app.get("/reviews", response_model=List[ReviewResponse])
+def get_all_reviews():
+    """
+    Get all reviews currently stored in the ledger.
+    Useful for discovering active agent IDs.
+    """
+    return reviews_db
+
 @app.get("/reviews/{agent_id}", response_model=AgentReputation)
 def get_reputation(agent_id: str):
     """
