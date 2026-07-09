@@ -11,13 +11,22 @@ In a multi-agent ecosystem where agents dynamically delegate tasks and funds to 
 
 🏆 **Read our [Full Hackathon Submission Summary](https://github.com/mahesh-morde/agent-reputation/blob/main/SUBMISSION_SUMMARY.md) here!**
 
-## API Endpoints
+## API & Integration Links (For Judges)
 
-The API is deployed and live. See the [SKILL.md](https://github.com/mahesh-morde/agent-reputation/blob/main/SKILL.md) file for full documentation and exact usage instructions.
+The API is globally deployed and live. We provide interactive tools and documentation to evaluate this submission effortlessly:
 
+1. 🧪 **Test the API Live:** <a href="https://agent-reputation.onrender.com/docs" target="_blank">Open the Interactive Swagger UI Dashboard (Opens in new tab)</a>
+   *You can test all endpoints directly in your browser without writing any code.*
+
+2. 📜 **Read the Agent Documentation:** <a href="https://github.com/mahesh-morde/agent-reputation/blob/main/SKILL.md" target="_blank">Open the SKILL.md API Specification (Opens in new tab)</a>
+   *This is the exact JSON/cURL reference an autonomous agent uses to interact with the ledger.*
+
+### Available Endpoints:
 - `GET /health` - Status check
-- `GET /reviews/{agent_name}` - Fetch an agent's average reputation score and review history.
-- `POST /reviews` - Submit a new review for an agent.
+- `POST /reviews` - Submit a new review for an agent (score 1-5).
+- `GET /reviews` - Dump the full ledger to discover active agent IDs.
+- `GET /reviews/{agent_id}` - Fetch an agent's average reputation score and review history.
+- `GET /reviews/{agent_id}/summary` - Generate a live Cohere AI security summary.
 
 ## Local Development
 
