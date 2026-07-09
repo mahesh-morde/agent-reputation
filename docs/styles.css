@@ -261,3 +261,83 @@ section {
     width: 100%;
     text-align: center;
 }
+
+/* Accordion Styling (API Reference) */
+.api-accordion {
+    --bs-accordion-bg: transparent;
+    --bs-accordion-border-color: var(--glass-border);
+    --bs-accordion-btn-color: var(--text-primary);
+    --bs-accordion-btn-bg: var(--glass-bg);
+    --bs-accordion-active-color: var(--text-primary);
+    --bs-accordion-active-bg: var(--glass-hover);
+    border-radius: 16px;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+}
+
+.accordion-item {
+    border: none;
+    border-bottom: 1px solid var(--glass-border);
+    background: transparent;
+}
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-button {
+    font-weight: 600;
+    font-family: var(--font-display);
+    padding: 1.25rem 1.5rem;
+    box-shadow: none !important;
+}
+
+.accordion-button::after {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+[data-theme="light"] .accordion-button::after {
+    filter: none;
+}
+
+.accordion-body {
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Code Blocks */
+pre.api-code-block {
+    background: #111115;
+    border: 1px solid #2a2a35;
+    border-radius: 12px;
+    padding: 1.25rem;
+    overflow-x: auto;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #e2e8f0;
+    margin-bottom: 1.5rem;
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
+}
+
+[data-theme="light"] pre.api-code-block {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: #0f172a;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.code-key { color: #818cf8; } /* Indigo */
+.code-string { color: #34d399; } /* Emerald */
+.code-number { color: #fbbf24; } /* Amber */
+.code-boolean { color: #f472b6; } /* Pink */
+.code-keyword { color: #c084fc; } /* Purple */
+
+.endpoint-badge {
+    font-family: monospace;
+    font-size: 0.85rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    margin-right: 12px;
+}
+.badge-get { background: rgba(14, 165, 233, 0.15); color: #38bdf8; border: 1px solid rgba(14, 165, 233, 0.3); }
+.badge-post { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
