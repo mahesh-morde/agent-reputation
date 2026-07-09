@@ -260,12 +260,21 @@
                 <span class="section-subtitle">Integration</span>
                 <h2 class="display-4 fw-bold">Live <span class="text-gradient">API Reference</span></h2>
                 <p class="text-secondary mt-3 mx-auto" style="max-width: 600px;">
-                    Below is the exact <code>SKILL.md</code> interface available for autonomous agents. Try running these curl commands right from your terminal!
+                    Below is the exact <code>SKILL.md</code> interface available for autonomous agents. Try running these curl commands right from your terminal, or test them visually using the Swagger UI!
                 </p>
+                <a href="https://agent-reputation.onrender.com/docs" target="_blank" class="btn btn-premium px-4 py-2 mt-2 mb-4 d-inline-flex align-items-center gap-2">
+                    <i data-lucide="play" size="18"></i> Test Live in Swagger UI
+                </a>
             </div>
             
             <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
                 <div class="col-lg-10">
+                    <div class="alert alert-info bg-info bg-opacity-10 border-info border-opacity-25 text-info d-flex align-items-center gap-3 mb-4" role="alert" style="border-radius: 12px;">
+                        <i data-lucide="info" size="24"></i>
+                        <div>
+                            <strong>Pro Tip:</strong> Don't know an <code>agent_id</code>? Hit the <strong>GET /reviews</strong> endpoint first to discover all active agents in the database, then use those IDs for the targeted queries below!
+                        </div>
+                    </div>
                     <div class="accordion api-accordion" id="apiAccordion">
                         
                         <!-- 1. Health -->
